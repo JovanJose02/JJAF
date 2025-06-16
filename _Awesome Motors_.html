@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2021 by anonymous (http://jsbin.com/mowotaziqi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+  <div>
+    <head>
+      <title>Customizing Cars</title>
+    <style id="jsbin-css">
+h1 {
+  background-color: #abd2d6;
+  border: 4px dashed #004b52;
+  border-width: 5px;
+  border-radius: 20px;
+  padding: 5px;
+  text-transform: uppercase;
+  color: #004b52;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  font-style: normal;
+  font-family: Georgia, Arial, Times New Roman;
+  margin: 10px;
+}
+body {
+  border: 4px inset #004b52;
+  border-radius: 10px;
+  background-color: #d9fcff;
+}
+footer {
+  padding: 0px 10px 0px 0px;
+  text-align: right;
+  font-size: 20px;
+  color: #c95700;
+  font-weight: bold;
+  font-style: italic;
+  font-family: Garamond, Times New Roman, Georgia;
+  margin: 10px;
+}
+#A {
+  font-weight: bold;
+  font-style: normal;
+  font-family: Georgia, Arial, Times New Roman;
+  color: red;
+  margin: 20px 0px 20px 40px;
+}
+#B {
+  font-weight: bold;
+  font-style: normal;
+  font-family: Georgia, Arial, Times New Roman;
+  color: blue;
+  margin: 20px 0px 20px 40px;
+}
+#C {
+  font-weight: bold;
+  font-style: normal;
+  font-family: Georgia, Arial, Times New Roman;
+  color: green;
+  margin: 20px 0px 20px 40px;
+}
+#D {
+  font-weight: bold;
+  font-style: normal;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #c4810c;
+  margin: 20px 0px 20px 40px;
+}
+img {
+  border: 8px outset #918d1a;
+  margin: 40px 40px 0px 40px;
+  border-radius: 30px;
+}
+#carDetails {
+  border: 5px groove #39c7cc;
+  margin: 40px 40px 0px 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #047478;
+  background-color: #e3fcfc;
+}
+#carPrice {
+  border: 5px groove #39cc63;
+  margin: 40px 40px 0px 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #047810;
+  background-color: #e3fce4;
+}
+#YEAR {
+  border: 4px inset red;
+  border-radius: 10px;
+  background-color: #ffdbdb;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #6b0000;
+}
+#CAR {
+  border: 4px inset blue;
+  border-radius: 10px;
+  background-color: #dbe0ff;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #04006b;
+}
+#MODEL {
+  border: 4px inset green;
+  border-radius: 10px;
+  background-color: #dbffe8;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #006b04;
+}
+#COLOR {
+  border: 4px inset #c4810c;
+  border-radius: 10px;
+  background-color: #fff6db;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #6b5600;
+}
+#E{
+  margin: 0px 10px 0px 40px;
+  color: #6b0000;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+}
+#F {
+  margin: 0px 10px 0px 40px;
+  color: #04006b;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+}
+#G {
+  margin: 0px 10px 0px 40px;
+  color: #006b04;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+}
+#H {
+  margin: 0px 10px 0px 40px;
+  color: #6b5600;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+}
+#Reset {
+  border: 4px outset #550585;
+  border-radius: 20px;
+  background-color: #ecccff;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #550585;
+}
+#Reset2 {
+  border: 4px outset #550585;
+  border-radius: 20px;
+  background-color: #ecccff;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #550585;
+  margin: 0px 0px 0px 80px;
+}
+#image {
+  color: #8a8629;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 20px;
+  font-family: Georgia, Arial, Times New Roman;
+}
+#details {
+  color: #1d8385;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 20px;
+  font-family: Georgia, Arial, Times New Roman;
+}
+#price {
+  color: #1d8522;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 20px;
+  font-family: Georgia, Arial, Times New Roman;
+}
+#Search {
+  margin: 40px 0px 0px 200px;
+  border: 4px outset #5a1d14;
+  border-radius: 20px;
+  background-color: #ffb0b0;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #751515;
+}
+#P {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #751515;
+  margin: 30px 0px 0px 100px;
+}
+#Q {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #751515;
+  margin: 30px 0px 0px 100px;
+}
+#R {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  font-family: Georgia, Arial, Times New Roman;
+  color: #751515;
+  margin: 30px 0px 0px 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+  </div>
+  <div>
+    <body>
+       <div>
+         <h1>Awesome Motors!!</h1>
+       </div>
+       <div>
+         <h2 id = "A">CHOOSE THE YEAR OF MANUFACTURE</h2>
+         <table>
+           <tr>
+             <th>
+               <div>
+                 <label for = "YEAR" id = "E">Choose a year:</label>
+         <select name = "YEAR" id = "YEAR" onchange = "findYear('year')">
+               <div>
+                 <option value = "Choose Year...">Choose Year...</option>
+               </div>
+               <div>
+                 <option value = "2014">2014</option>
+               </div>
+               <div>
+                 <option value = "2015">2015</option>
+               </div>
+               <div>
+                 <option value = "2016">2016</option>
+               </div>
+               <div>
+                 <option value = "2017">2017</option>
+               </div>
+               <div>
+                 <option value = "2018">2018</option>
+               </div>
+               <div>
+                 <option value = "2019">2019</option>
+               </div>
+               <div>
+                 <option value = "2020">2020</option>
+               </div>
+               <div>
+                 <option value = "2021">2021</option>
+               </div>
+                </select>
+             </div>
+             </th>
+           </tr>
+         </table>
+       </div>
+       <div>
+         <h2 id = "B">CHOOSE A MAKE/BRAND OF CAR</h2>
+         <table>
+           <tr>
+             <th>
+               <div>
+           <label for = "CAR" id = "F">Choose a car:</label>
+    <select name = "CAR" id = "CAR" onchange = "findMake('make')">
+             <div>
+                 <option value = "Choose Make/Brand...">Chose Make/Brand...</option>
+             </div>
+             <div>
+                <option value = "Acura">Acura</option>
+             </div>
+             <div>
+                <option value = "Tesla">Tesla</option>
+             </div>
+             <div>
+                <option value = "Mercedes-Benz">Mercedes-Benz</option>
+             </div>
+             <div>
+                <option value = "BMW">BMW</option>
+             </div>
+           </select>
+         </div>
+             </th>
+           </tr>
+         </table>
+       </div>
+       <div>
+         <h2 id = "C">CHOOSE THE CAR'S MODEL</h2>
+         <table>
+           <tr>
+             <th>
+               <div>
+           <label for = "MODEL" id = "G">Choose a model:</label>
+    <select name = "MODEL" id = "MODEL" onchange = "findModel('model')">
+             <div>
+                 <option value = "Choose Model...">Choose Model...</option>
+             </div>
+             <div>
+                <option value = "Sport">Sport</option>
+             </div>
+             <div>
+                <option value = "Convertible">Convertible</option>
+             </div>
+             <div>
+                <option value = "SUV">SUV</option>
+             </div>
+             <div>
+                <option value = "Luxury">Luxury</option>
+             </div>
+           </select>
+         </div>
+             </th>
+           </tr>
+         </table>
+       </div>
+       <div>
+         <h2 id = "D">CHOOSE THE CAR'S COLOR</h2>
+         <table>
+           <tr>
+             <th>
+               <div>
+           <label for = "COLOR" id = "H">Choose a color:</label>
+    <select name = "COLOR" id = "COLOR" onchange = "findColor('color')">
+             <div>
+                 <option value = "Choose Color...">Choose Color...</option>
+             </div>
+             <div>
+                <option value = "Red">Red</option>
+             </div>
+             <div>
+                <option value = "Silver">Silver</option>
+             </div>
+             <div>
+                <option value = "Black">Black</option>
+             </div>
+             <div>
+                <option value = "Blue">Blue</option>
+             </div>
+           </select>
+       </div>
+             </th>
+           </tr>
+         </table>
+         <table>
+           <tr>
+             <th>
+               <p id = "P">
+                 Click the search button after you selected your choices!!
+               </p>
+               <p id = "Q">
+                 Click the reset button to clear everthing!!
+               </p>
+             </th>
+             <th>
+               <input id = "Search"
+                      type = "button"
+                      value = "Search"
+                      onclick = "searchInputs('year',
+                                              'make',
+                                              'model',
+                                              'color')" >
+             </th>
+           </tr>
+         </table>
+         <table>
+             <tr>
+               <th>
+                 <img id = "imageArea"
+                      height = "300"
+                      width = "auto"
+                      border = "0"
+                      onclick = "clearTextArea()">
+                 <h3 id = "image">Image Of Car</h3>
+               </th>
+               <th>
+                 <textarea id = "carDetails"
+                           name = "outputDetails"
+                           height = "200"
+                           rows = "5" 
+                           cols = "38"
+                           width = "200">
+                 </textarea>
+                 <h3 id = "details">Details Of Car</h3>
+                 <textarea id = "carPrice"
+                           name = "outputPrice"
+                           rows = "1" 
+                           cols = "10">
+                 </textarea>
+                 <h3 id = "price">Price Of Car</h3>
+               </th>
+               <th>
+                 <input id = "Reset"  
+                        type = "button"
+                        value = "Reset"
+                        onclick = "clearTextArea()" >   
+               </th>
+             </tr>
+         </table>
+       </div>
+       <div>
+         <footer>College Board Performance Task</footer>
+       </div>
+      </html>  
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <script id="jsbin-javascript">
+
+// This data stores the year of manfacture
+var carYear = ["2014" , "2015" , "2016" , "2017" , "2018" , "2019" , "2020" , "2021"];    
+
+// This data stores the make of car
+var carMake = ["Acura" , "Tesla" , "Mercedes-Benz" , "BMW"];
+
+// This data stores the model of car
+var carModel = ["Sport" , "Convertible" , "SUV" , "Luxury"];
+
+// This data stores the color of car
+var carColor = ["Red" , "Silver" , "Black", "Blue"];
+
+// This data stores Acura Images
+//                                                              INDEX VALUES FOR IMAGES
+                //       Red Sport                 Silver Sport              Black Sport                 Blue Sport           
+var acuraImages = ["https://bit.ly/3a343qh" , "https://bit.ly/324IOQw" , "https://bit.ly/3uYC2Im" , "https://bit.ly/3ubs0Uf" ,
+                //     Red Convertible           Silver Convertible          Black Convertible         Blue Convertible
+                   "https://bit.ly/3wI7MmJ" ,          null            ,         null             , "https://bit.ly/3u7aPDb" ,
+                //        Red SUV                    Silver SUV                 Black SUV                    Blue SUV
+                   "https://bit.ly/3egP1hE" , "https://bit.ly/32rJ4cw" , "https://bit.ly/2SB09PD" , "https://bit.ly/3gWgV5F" ,
+                //        Red Luxury                 Silver Luxury             Black Luxury                Blue Luxury
+                   "https://bit.ly/3e8dpmM" , "https://bit.ly/3vxW5NY" , "https://bit.ly/3e5II1K" , "https://bit.ly/3t8I3ke"];
+                 
+// This data stores Tesla Images
+//                                                              INDEX VALUES FOR IMAGES
+                //       Red Sport                 Silver Sport              Black Sport                 Blue Sport
+var teslaImages = ["https://cnet.co/3d4aSto", "https://bit.ly/3fZrWmh" , "https://bit.ly/3x2LNXQ" , "https://bit.ly/3vwFJFn" ,
+                //     Red Convertible           Silver Convertible          Black Convertible         Blue Convertible
+                   "https://bit.ly/3a3iniy" , "https://cnet.co/3uER6dV",      null                , "https://bit.ly/330ATUz" ,
+                //        Red SUV                    Silver SUV                 Black SUV                    Blue SUV
+                   "https://bit.ly/2Q6YznI" , "https://bit.ly/3drNy9i" , "https://bit.ly/2OXZlTe" , "https://bit.ly/3eGXkUp" ,
+                //        Red Luxury                 Silver Luxury             Black Luxury                Blue Luxury
+                   "https://bit.ly/2Ras4Fa" , "https://bit.ly/3eH3AeV" ,      null                , "https://bit.ly/2R8GFRw"];
+                         
+// This data stores Mercedes-Benz Images
+//                                                              INDEX VALUES FOR IMAGES
+                       //       Red Sport                 Silver Sport              Black Sport                 Blue Sport
+var mercedesBenzImages = ["https://bit.ly/3dtKZDN" , "https://bit.ly/2RCxVmQ" , "https://bit.ly/3n2HQxF" , "https://bit.ly/3u9ykeP" ,
+                       //     Red Convertible           Silver Convertible          Black Convertible         Blue Convertible
+                          "https://bit.ly/3drcnSL" , "https://bit.ly/3ahbASr" , "https://bit.ly/3ef2BSO" , "https://bit.ly/3aS7Wi7" ,
+                       //        Red SUV                    Silver SUV                 Black SUV                    Blue SUV
+                                  null             , "https://bit.ly/3uUmG7E" , "https://bit.ly/3gkpxTm" , "https://bit.ly/2Sc8cBX" ,
+                       //        Red Luxury                 Silver Luxury             Black Luxury                Blue Luxury
+                          "https://bit.ly/3t8fJhS" , "https://bit.ly/3gO4Rn7" ,         null             , "https://bit.ly/3voTg1Q"];   
+
+// This data stores BMW Images
+//                                                              INDEX VALUES FOR IMAGES
+              //       Red Sport                 Silver Sport              Black Sport                 Blue Sport
+var BMWImages = ["https://bit.ly/3gfWjFg" , "https://bit.ly/3tyLfGU" , "https://bit.ly/3suchy6" , "https://bit.ly/3aTPiX7" ,
+              //     Red Convertible           Silver Convertible          Black Convertible         Blue Convertible
+                 "https://bit.ly/3duqoyV" , "https://bit.ly/3aDPUQL" , "https://bit.ly/3aoDlbQ" , "https://bit.ly/3t9stoF" ,
+              //        Red SUV                    Silver SUV                 Black SUV                    Blue SUV
+                 "https://bit.ly/3drT7EI" ,         null             , "https://bit.ly/2QhAAC5" , "https://bit.ly/3aVfuAy" ,
+              //        Red Luxury                 Silver Luxury             Black Luxury                Blue Luxury
+                 "https://bit.ly/3aSfUrx" ,         null             , "https://bit.ly/2ScXsmV" , "https://bit.ly/3xDatq7"];
+
+// This data stores Acura Price
+//                                                              INDEX VALUES FOR PRICES
+                //  2014      2015     2016     2017     2018     2019     2020     2021
+var acuraPrices = ["$115679" , "$129674" , "$136789" , "$140235" , "$144234" , "$146618" , "$157500" , "$159495"];
+
+// This data stores Tesla Price
+//                                                              INDEX VALUES FOR PRICES
+                //  2014      2015     2016     2017     2018     2019     2020     2021
+var teslaPrices = ["$57483" , "$61472" , "$64758" , "$68420" , "$78612" , "$79990" , "$83256" , "$88760"];
+
+// This data stores Mercedes-Benz Price
+//                                                              INDEX VALUES FOR PRICES
+                       //  2014      2015     2016     2017     2018     2019     2020     2021
+var mercedesBenzPrices = ["$45083" , "$50284" , "$55878" , "$59867" , "$65468" , "$75687" , "$81837" , "$85256"];
+
+// This data stores BMW Price
+//                                                              INDEX VALUES FOR PRICES
+              //  2014      2015     2016     2017     2018     2019     2020     2021
+var BMWPrices = ["$34974" , "$397563" , "$42765" , "$45689" , "$47928" , "$52878" , "$58784" , "$68822"];
+
+// This function puts everything together "Details","Price", & "Image"
+function searchInputs(year , make , model , color) {
+  year = findYear(year);
+  make = findMake(make);
+  model = findModel(model);
+  color = findColor(color);
+  var detailsIndex = findCarDetails(year , make , model , color);
+  var priceIndex = findCarPrice(year , make);
+  var imageIndex = findImage(make , model , color);
+  if(imageIndex != null && priceIndex != null && detailsIndex != null) {
+    document.getElementById("carDetails").value = " " + detailsIndex;
+    document.getElementById("carPrice").value = " " + priceIndex;
+    document.getElementById("imageArea").src = " " + imageIndex;
+  }
+  else if(year == null) {
+    alert("Please choose a year!!");
+    document.getElementById("YEAR").focus();
+  }
+  else if(make == null) {
+    alert("Please choose a make!!");
+    document.getElementById("CAR").focus();
+  }
+  else if(model == null) {
+    alert("Please choose a model!!");
+    document.getElementById("MODEL").focus();
+  }
+  else if(color == null) {
+    alert("Please choose a color!!");
+    document.getElementById("COLOR").focus();
+  }
+  else if(imageIndex == null) {
+    alert("The Type of Car is not available at Awesome Motors!!");
+  }
+}
+
+// This function finds the details of the car
+function findCarDetails(year , make , model , color) {
+  year = findYear(year);
+  make = findMake(make);
+  model = findModel(model);
+  color = findColor(color);
+  var format = "This is the Details of the Car!!" + "\n" + 
+      "1." + " " + "The year of manufacture is" + " "+ year + "." + "\n" + 
+      "2." + " " + "The brand of car is" + " "+ make + "." + "\n" + 
+      "3." + " " + "The model of car is" + " " + model + "." + "\n" + 
+      "4." + " " + "The color of car is" + " " + color + ".";
+  if(year != null && make != null && model != null && color != null) {
+    return format;
+  }
+  else {
+    return null;
+  }
+}
+
+// This function finds Car Price
+function findCarPrice(year, make) {
+  year = findYear(year);
+  make = findMake(make);
+  if(make != null && make == "Acura") {
+    for(var acuraIndex in carYear) {
+      if(year == carYear[acuraIndex]) {
+        return acuraPrices[acuraIndex];
+      }
+      else if(year == null) {
+        return null;
+      }
+    }
+  }
+  else if(make != null && make == "Tesla") {
+    for(var teslaIndex in carYear) {
+      if(year == carYear[teslaIndex]) {
+        return teslaPrices[teslaIndex];
+      }
+      else if(year == null) {
+        return null;
+      }
+    }
+  }
+  else if(make != null && make == "Mercedes-Benz") {
+    for(var mercedesBenzIndex in carYear) {
+      if(year == carYear[mercedesBenzIndex]) {
+        return mercedesBenzPrices[mercedesBenzIndex];
+      }
+      else if(year == null) {
+        return null;
+      }
+    }
+  }
+  else if(make != null && make == "BMW") {
+    for(var BMWIndex in carYear) {
+      if(year == carYear[BMWIndex]) {
+        return BMWPrices[BMWIndex];
+      }
+      else if(year == null) {
+        return null;
+      }
+    }
+  }
+  else {
+    return null;
+  }
+}
+
+// This function finds the image of the SELECTED car
+function findImage(make , model , color) {
+  make = findMake(make);
+  model = findModel(model);
+  color = findColor(color);
+  var acura = findAcuraImage(make , model , color);
+  var tesla = findTeslaImage(make , model , color);
+  var mercedesBenz = findMercedesBenzImage(make , model , color);
+  var BMW = findBMWImage(make , model , color);
+  if(make != null && model != null && color != null) {
+    if(acura != null) {
+      return acura;
+    }
+    else if(tesla != null) {
+      return tesla;
+    }
+    else if(mercedesBenz != null) {
+      return mercedesBenz;
+    }
+    else {
+      return BMW;
+    }
+  }
+  else {
+    return null;
+  }
+}
+
+// This function finds the image of the Acura car
+function findAcuraImage(make , model , color) {
+  make = findMake(make);
+  model = findModel(model);
+  color = findColor(color);
+  if(make == "Acura" && make != null && model != null && color != null) {
+      if(model == "Sport" && color == "Red") {
+        return acuraImages[0];
+      }
+      else if(model == "Sport" && color == "Silver") {
+        return acuraImages[1];
+      }
+      else if(model == "Sport" && color == "Black") {
+        return acuraImages[2];
+      }
+      else if(model == "Sport" && color == "Blue") {
+        return acuraImages[3];
+      }
+      else if(model == "Convertible" && color == "Red") {
+        return acuraImages[4];
+      }
+      else if(model == "Convertible" && color == "Silver") {
+        return acuraImages[5];
+      }
+      else if(model == "Convertible" && color == "Black") {
+        return acuraImages[6];
+      }
+      else if(model == "Convertible" && color == "Blue") {
+        return acuraImages[7];
+      }
+      else if(model == "SUV" && color == "Red") {
+        return acuraImages[8];
+      }
+      else if(model == "SUV" && color == "Silver") {
+        return acuraImages[9];
+      }
+      else if(model == "SUV" && color == "Black") {
+        return acuraImages[10];
+      }
+      else if(model == "SUV" && color == "Blue") {
+        return acuraImages[11];
+      }
+      else if(model == "Luxury" && color == "Red") {
+        return acuraImages[12];
+      }
+      else if(model == "Luxury" && color == "Silver") {
+        return acuraImages[13];
+      }
+      else if(model == "Luxury" && color == "Black") {
+        return acuraImages[14];
+      }
+      else {
+        return acuraImages[15];
+      }
+    }
+    else {
+      return null;
+    }
+}
+
+// This function finds the image of the Tesla car 
+function findTeslaImage(make , model , color) {
+  make = findMake(make);
+  model = findModel(model);
+  color = findColor(color);
+  if(make == "Tesla" && make != null && model != null && color != null) {
+    if(model == "Sport" && color == "Red") {
+        return teslaImages[0];
+      }
+      else if(model == "Sport" && color == "Silver") {
+        return teslaImages[1];
+      }
+      else if(model == "Sport" && color == "Black") {
+        return teslaImages[2];
+      }
+      else if(model == "Sport" && color == "Blue") {
+        return teslaImages[3];
+      }
+      else if(model == "Convertible" && color == "Red") {
+        return teslaImages[4];
+      }
+      else if(model == "Convertible" && color == "Silver") {
+        return teslaImages[5];
+      }
+      else if(model == "Convertible" && color == "Black") {
+        return teslaImages[6];
+      }
+      else if(model == "Convertible" && color == "Blue") {
+        return teslaImages[7];
+      }
+      else if(model == "SUV" && color == "Red") {
+        return teslaImages[8];
+      }
+      else if(model == "SUV" && color == "Silver") {
+        return teslaImages[9];
+      }
+      else if(model == "SUV" && color == "Black") {
+        return teslaImages[10];
+      }
+      else if(model == "SUV" && color == "Blue") {
+        return teslaImages[11];
+      }
+      else if(model == "Luxury" && color == "Red") {
+        return teslaImages[12];
+      }
+      else if(model == "Luxury" && color == "Silver") {
+        return teslaImages[13];
+      }
+      else if(model == "Luxury" && color == "Black") {
+        return teslaImages[14];
+      }
+      else {
+        return teslaImages[15];
+      }
+    }
+    else {
+      return null;
+    }
+ }
+
+// This function finds the image of the Mercedes-Benz car 
+function findMercedesBenzImage(make , model , color) {
+  make = findMake(make);
+  model = findModel(model);
+  color = findColor(color);
+  if(make == "Mercedes-Benz" && make != null && model != null && color != null) {
+      if(model == "Sport" && color == "Red") {
+        return mercedesBenzImages[0];
+      }
+      else if(model == "Sport" && color == "Silver") {
+        return mercedesBenzImages[1];
+      }
+      else if(model == "Sport" && color == "Black") {
+        return mercedesBenzImages[2];
+      }
+      else if(model == "Sport" && color == "Blue") {
+        return mercedesBenzImages[3];
+      }
+      else if(model == "Convertible" && color == "Red") {
+        return mercedesBenzImages[4];
+      }
+      else if(model == "Convertible" && color == "Silver") {
+        return mercedesBenzImages[5];
+      }
+      else if(model == "Convertible" && color == "Black") {
+        return mercedesBenzImages[6];
+      }
+      else if(model == "Convertible" && color == "Blue") {
+        return mercedesBenzImages[7];
+      }
+      else if(model == "SUV" && color == "Red") {
+        return mercedesBenzImages[8];
+      }
+      else if(model == "SUV" && color == "Silver") {
+        return mercedesBenzImages[9];
+      }
+      else if(model == "SUV" && color == "Black") {
+        return mercedesBenzImages[10];
+      }
+      else if(model == "SUV" && color == "Blue") {
+        return mercedesBenzImages[11];
+      }
+      else if(model == "Luxury" && color == "Red") {
+        return mercedesBenzImages[12];
+      }
+      else if(model == "Luxury" && color == "Silver") {
+        return mercedesBenzImages[13];
+      }
+      else if(model == "Luxury" && color == "Black") {
+        return mercedesBenzImages[14];
+      }
+      else {
+        return mercedesBenzImages[15];
+      }
+    }
+    else {
+      return null;
+    }
+ }
+
+// This function finds the image of the BMW car 
+function findBMWImage(make , model , color) {
+  make = findMake(make);
+  model = findModel(model);
+  color = findColor(color);
+  if(make == "BMW" && make != null && model != null && color != null) {
+      if(model == "Sport" && color == "Red") {
+        return BMWImages[0];
+      }
+      else if(model == "Sport" && color == "Silver") {
+        return BMWImages[1];
+      }
+      else if(model == "Sport" && color == "Black") {
+        return BMWImages[2];
+      }
+      else if(model == "Sport" && color == "Blue") {
+        return BMWImages[3];
+      }
+      else if(model == "Convertible" && color == "Red") {
+        return BMWImages[4];
+      }
+      else if(model == "Convertible" && color == "Silver") {
+        return BMWImages[5];
+      }
+      else if(model == "Convertible" && color == "Black") {
+        return BMWImages[6];
+      }
+      else if(model == "Convertible" && color == "Blue") {
+        return BMWImages[7];
+      }
+      else if(model == "SUV" && color == "Red") {
+        return BMWImages[8];
+      }
+      else if(model == "SUV" && color == "Silver") {
+        return BMWImages[9];
+      }
+      else if(model == "SUV" && color == "Black") {
+        return BMWImages[10];
+      }
+      else if(model == "SUV" && color == "Blue") {
+        return BMWImages[11];
+      }
+      else if(model == "Luxury" && color == "Red") {
+        return BMWImages[12];
+      }
+      else if(model == "Luxury" && color == "Silver") {
+        return BMWImages[13];
+      }
+      else if(model == "Luxury" && color == "Black") {
+        return BMWImages[14];
+      }
+      else {
+        return BMWImages[15];
+      }
+    }
+    else {
+      return null;
+    }
+}
+
+// Finds what year the user chose  
+function findYear(year) {
+  year = document.getElementById("YEAR").value;
+  for(var a = 0; a <= carYear.length; a++) {
+    if(year == carYear[a]) {
+      return carYear[a];
+    }
+    else if(year == null) {
+      return null;
+    }
+  }
+}
+
+// Finds what model the user chose 
+function findModel(model) {
+  model = document.getElementById("MODEL").value;
+  for(var c = 0; c <= carModel.length; c++) {
+    if(model == carModel[c]) {
+      return carModel[c];
+    }
+    else if(model == null) {
+      return null;
+    }
+  }
+}
+
+// Finds what make of car the user chose 
+function findMake(make) {
+  make = document.getElementById("CAR").value;
+  var b = 0;
+  while (b <= carMake.length) {
+    if(make == carMake[b]) {
+      return carMake[b];
+    }
+    else if(make == null) {
+      return null;
+    }
+    b++;
+  }
+}
+
+// Finds what color the user chose 
+function findColor(color) {
+  color = document.getElementById("COLOR").value;
+  var d = 0;
+  while (d <= carColor.length) {
+    if(color == carColor[d]) {
+      return carColor[d];
+    }
+    else if(color == null) {
+      return null;
+    }
+    d++;
+  }
+}
+
+// This functions is used to clear outputs when clicked on!!
+function clearTextArea() {
+  document.getElementById("YEAR").value = 'Choose Year...'; 
+  document.getElementById("CAR").value = 'Chose Make/Brand...';
+  document.getElementById("MODEL").value = 'Choose Model...';
+  document.getElementById("COLOR").value = 'Choose Color...';
+  document.getElementById("carPrice").value = '';
+  document.getElementById("carDetails").value = '';
+  document.getElementById("imageArea").src = " ";
+}
+
+
+
+</script>
+</body>
+  </div>
